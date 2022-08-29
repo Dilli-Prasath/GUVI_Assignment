@@ -1,3 +1,5 @@
+// database connection code
+
 <?php
 
 $txtname = $_POST['txtname'];
