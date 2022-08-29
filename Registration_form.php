@@ -9,17 +9,12 @@ $txtno = $_POST['txtno'];
 $txtAltno = $_POST['txtAltno'];
 
 
-
-
 if (!empty($txtname) || !empty($txtUsername) || !empty($txtDOB) || !empty($txtGender) || !empty($txtEmailid) || !empty($txtno) || !empty($txtAltno) )
 {
-
 $host = "localhost";
 $dbusername = "dilli";
 $dbpassword = "Swagers@00";
 $dbname = "dilli";
-
-
 
 // Create connection
 $conn = new mysqli ($host, $dbusername, $dbpassword, $dbname);
@@ -28,7 +23,8 @@ if (mysqli_connect_error()){
   die('Connect Error ('. mysqli_connect_errno() .') '
     . mysqli_connect_error());
 }
-else{
+ else
+ {
   $SELECT = "SELECT email From register Where email = ? Limit 1";
   $INSERT = "INSERT Into register (txtname , txtUsername ,txtDOB, txtGender, txtEmailid, txtno, txtAltno )values(?,?,?,?,?,?,?)";
 
@@ -47,14 +43,19 @@ else{
       $stmt->bind_param("sssssss", $txtname , $txtUsername , $txtDOB, $txtGender, $txtEmailid, $txtno, $txtAltno);
       $stmt->execute();
       echo "Registration Records Inserted sucessfully";
-     } else {
+     } 
+   else 
+   {
       echo "Someone already registered using this email";
      }
      $stmt->close();
      $conn->close();
     }
-} else {
+} 
+else
+{
  echo "All field are required";
  die();
 }
+
 ?>
