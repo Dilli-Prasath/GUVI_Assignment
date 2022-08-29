@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<!-- Login_index -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>Login and Registration Form in HTML</title>
+      <link rel="stylesheet" href="Login_style.css">
+      <!--Google sign in-->
+      <meta name="google-signin-client_id" content="781903462322-4ku03jg6pslt5a5f7j1mn09cuij7qhnp.apps.googleusercontent.com">
+      <script src="https://apis.google.com/js/platform.js" async defer></script>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <body>
+
+      <div class="wrapper">
+         <div class="title-text">
+            <div class="title login">
+               Login Form
+            </div>
+            <div class="title signup">
+               Signup Form
+            </div>
+            <div class="g-signin2"></div>
+         </div>
+
+         <!--Login & Sign up container-->
+
+         <div class="form-container">
+            <div class="slide-controls">
+               <input type="radio" name="slide" id="login" checked>
+               <input type="radio" name="slide" id="signup">
+               <label for="login" class="slide login">Login</label>
+               <label for="signup" class="slide signup">Signup</label>
+               <div class="slider-tab"></div>
+            </div>
+
+            <!-- Email & Password form -->
+
+            <div class="form-inner">
+               <form action="Registration_form.html" method="post" class="login">
+                  <div class="field">
+                     <input type="text" name="txtadd" id="txtadd" placeholder="Email Address" required>
+                  </div>
+                  <div class="field">
+                     <input spellcheck="false" type="text" name="txtPass" id="txtPass" placeholder="password" required>
+                     <div class="icon-text">
+                        <i class="fas fa-exclamation-circle error_icon"></i>
+                        <h6 class="text"></h6>
+                     </div>
+                  </div>
+
+                  <!-- Forget Password  -->
+                                       
+                  
+                  <div class="pass-link">
+                     <a href="password_login.html">Forgot password?</a>
+                  </div>
+
+                   <!--Login Button-->
+
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Login" onclick="location.href = 'Registration_form.html';">
+                  </div>
+
+                   <!--SignUp now Link -->
+
+                  <div class="signup-link">
+                     Not a member? <a href="#">Signup now</a>
+                  </div>
+                </form>
+
+                 <!--Signup Button-->
+
+               <form action="#" class="signup">
+                  <div class="field">
+                     <input type="text" name="txtEmail" id="txtEmail" placeholder="Email Address" required>
+                  </div>
+
+                   <!--Password & Confirm Password field-->
+
+                  <div class="field">
+                     <input type="password" name="txtPass" id="txtPass" placeholder="Password" required>
+                  </div>
+                  <div class="field">
+                     <input type="password" name="txtPass" id="txtPass" placeholder="Confirm password" required>
+                  </div>
+
+                   <!--Signup Layer-->
+
+                  <div class="field btn">
+                     <div class="btn-layer"></div>
+                     <input type="submit" value="Signup">
+                  </div>
+               </form>
+            </div>
+         </div>
+      </div>
+
+      <!--Javascript-->
+      <script>
+         const loginText = document.querySelector(".title-text .login");
+         const loginForm = document.querySelector("form.login");
+         const loginBtn = document.querySelector("label.login");
+         const signupBtn = document.querySelector("label.signup");
+         const signupLink = document.querySelector("form .signup-link a");
+         signupBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "-50%";
+           loginText.style.marginLeft = "-50%";
+         });
+         loginBtn.onclick = (()=>{
+           loginForm.style.marginLeft = "0%";
+           loginText.style.marginLeft = "0%";
+         });
+         signupLink.onclick = (()=>{
+           signupBtn.click();
+           return false;
+         });
+      </script>
+      <!--/Javascript-->
+
+   </body>
+</html>

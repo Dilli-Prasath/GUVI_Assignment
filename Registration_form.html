@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form </title>--->
+    <link rel="stylesheet" href="Registration_style.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+
+     <!--Registration Container-->
+
+  <div class="container">
+    <div class="title">Registration </div>
+    <div class="content">
+      <form action="#">
+
+         <!--Enter your name-->
+
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Full Name</span>
+            <input type="text" name="txtname" id="txtname" placeholder="Enter your name" required>
+          </div>
+
+         <!--Enter your username-->
+
+          <div class="input-box">
+            <span class="details">Username</span>
+            <input type="text" name="txtUsername" id="txtUsername" placeholder="Enter your username" required>
+          </div>
+
+          <!--Enter your email-->
+
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="text" name="txtEmailid" id="txtEmailid" placeholder="Enter your email" required>
+          </div>
+
+          <!--Enter your  number-->
+
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="text" name="txtno" id="txtno" placeholder="Enter your number" required>
+          </div>
+
+           <!--Enter your DOB-->
+
+          <div class="input-box">
+            <span class="details">DOB</span>
+            <input type="text" name="txtDOB" id="txtDOB" placeholder="Enter your DOB" required>
+          </div>
+
+           <!--Confirm your Alternate Phone Number-->
+
+          <div class="input-box">
+            <span class="details">Alternate Phone Number</span>
+            <input type="text" name="txtAltno" id="txtAltno" placeholder="Alternate Phone Number" required>
+          </div>
+        </div>
+
+         <!--Gender Radio Buttons-->
+
+        <div class="gender-details">
+          <input type="radio" name="gender" id="dot-1">
+          <input type="radio" name="gender" id="dot-2">
+          <input type="radio" name="gender" id="dot-3">
+          <span class="gender-title">Gender</span>
+          
+          <div class="category">
+             <!--Male label-->
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender">Male</span>
+          </label>
+          <label for="dot-2">
+            <!--Female label-->
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <!--Prefer not to say label-->
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+
+         <!--Register Button-->
+
+        <div class="button">
+          <input type="submit" value="Register">
+        </div>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
